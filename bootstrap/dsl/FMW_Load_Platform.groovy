@@ -28,6 +28,7 @@ generateAEMLoadPlatformJob.with {
 						# Create Gerrit repository
 						# push the sample codes to the sample Gitlab project
 						git remote add adop git@gitlab:root/$target_repo_name.git
+						echo -e "Host gitlab\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config 
 						git fetch adop
 						git push adop +refs/remotes/origin/*:refs/heads/*
 				''')

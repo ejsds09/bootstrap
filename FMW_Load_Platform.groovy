@@ -1,5 +1,5 @@
 // Jobs
-def generateAEMLoadPlatformJob = freeStyleJob("FMW_Load_Platform")
+def generateAEMLoadPlatformJob = freeStyleJob("Load_FusionMiddleware_Cartridge")
  
 // Setup generateBuildPipelineJobs
 generateAEMLoadPlatformJob.with {

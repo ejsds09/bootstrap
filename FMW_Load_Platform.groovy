@@ -14,7 +14,7 @@ generateAEMLoadPlatformJob.with {
 		}
 		steps {
 				shell('''#!/bin/bash -ex
-						token="$(curl -X POST "http://gitlab:9080/api/v3/session?login=root&password=admin01aem" | python -c "import json,sys;obj=json.load(sys.stdin);print obj['private_token'];")"
+						token="$(curl -X POST "http://gitlab:9080/api/v3/session?login=root&password=gitlab1234" | python -c "import json,sys;obj=json.load(sys.stdin);print obj['private_token'];")"
 						
 						key=$(cat ~/.ssh/id_rsa.pub)
 

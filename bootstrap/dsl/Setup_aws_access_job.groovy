@@ -11,10 +11,11 @@ freeStyleJob('Setup_AWS_Access') {
 		shell('''#!/bin/bash
 mkdir -p ~/.aws
 echo "[default]" >  ~/.aws/credentials
+echo "[default]" >  ~/.aws/config
 echo "aws_access_key_id = $AWS_ACCESS_KEY" >> ~/.aws/credentials
 echo "aws_secret_access_key = $AWS_SECRET_KEY" >> ~/.aws/credentials
-echo "output = text"  >> ~/.aws/credentials
-echo "region = $AWS_REGION" >> ~/.aws/credentials
+echo "output = text"  >> ~/.aws/config
+echo "region = $AWS_REGION" >> ~/.aws/config
 cat SSH_KEY_FILE > /etc/fmw_oracle.pem & chmod 600 /etc/fmw_oracle.pem
          ''')
     }
